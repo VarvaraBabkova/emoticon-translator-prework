@@ -2,7 +2,6 @@
 require "yaml"
 def load_library (file)
   orig_hash = YAML.load_file(file)
-  puts orig_hash
   hash = {
     "get_meaning" => {},
     "get_emoticon" => {}
@@ -17,6 +16,7 @@ end
 
 def get_japanese_emoticon (file, am_em)
   hash = load_library(file)
+  puts hash
   jap_em = hash["get_emoticon"].key(am_em) if hash["get_emoticon"].has_value?(am_em)
 end
 
