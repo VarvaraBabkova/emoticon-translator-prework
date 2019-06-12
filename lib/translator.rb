@@ -8,7 +8,7 @@ def load_library (file)
     "get_emoticon" => {}
   }
   orig_hash.each do |key, array|
-    hash["get_meaning"][array[1]] = ""
+    hash["get_meaning"][array[1]] = key
   end
 
   return hash
