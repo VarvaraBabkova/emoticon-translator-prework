@@ -24,4 +24,5 @@ end
 
 def get_english_meaning (file, jap_em)
   hash = load_library(file)
+  meaning = hash["get_meaning"][jap_em] if hash["get_meaning"].has_key(jap_em)
 end
