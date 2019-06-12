@@ -9,7 +9,7 @@ def load_library (file)
   }
   orig_hash.each do |key, array|
     hash["get_meaning"][array[1]] = key
-    hash["get_meaning"][array[0]] = key
+    hash["get_emoticon"][array[0]] = key
   end
 
   return hash
